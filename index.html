@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <form name="form">
+            <div class="display">
+                <input type="text" placeholder="0" name="displayResult" />
+
+            </div>
+            <div class="buttons">
+                <div class="row">
+                    <input type="button" name="b7" value="7" onclick="calNumbers(b7.value)">
+                    <input type="button" name="b8" value="8" onclick="calNumbers(b8.value)">
+                    <input type="button" name="b9" value="9" onclick="calNumbers(b9.value)">
+                    <input type="button" name="add" value="+" onclick="calNumbers(add.value)">
+                </div>
+                <div class="row">
+                    <input type="button" name="b4" value="4" onclick="calNumbers(b4.value)">
+                    <input type="button" name="b5" value="5" onclick="calNumbers(b5.value)">
+                    <input type="button" name="b6" value="6" onclick="calNumbers(b6.value)">
+                    <input type="button" name="sub" value="-" onclick="calNumbers(sub.value)">
+                </div>
+                <div class="row">
+                    <input type="button" name="b3" value="3" onclick="calNumbers(b3.value)">
+                    <input type="button" name="b2" value="2" onclick="calNumbers(b2.value)">
+                    <input type="button" name="b1" value="1" onclick="calNumbers(b1.value)">
+                    <input type="button" name="mul" value="*" onclick="calNumbers(mul.value)">
+                </div>
+                <div class="row">
+                    <input type="button" name="b0" value="0" onclick="calNumbers(b0.value)">
+                    <input type="button" name="bdot" value="." onclick="calNumbers(bdot.value)">
+                    <input type="button" name="bdivide" value="/" onclick="calNumbers(bdivide.value)">
+                    <input type="button" name="eql" value="=" onclick="displayResult.value=eval(displayResult.value)">
+                </div>
+                <div class="row">
+                    <input type="button" value="AC" onClick="displayResult.value=0">
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        function calNumbers(res){
+            form.displayResult.value=form.displayResult.value+res;
+        }
+    </script>
+</body>
+</html>
